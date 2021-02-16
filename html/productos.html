@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Productos</title>
+  <link rel="stylesheet" href="/css/Itza.css">
+  <link rel="icon" href="/img/logo.ico">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inika&family=Marko+One&display=swap" rel="stylesheet">
+  <style>
+    .container-all {
+      position: relative;
+      min-width: 70%;
+      width: 70%;
+      overflow: hidden;
+      margin: 15px auto;
+    }
+
+    .slide {
+      width: 100%;
+      display: flex;
+      transform: translate3d(0, 0, 0);
+      transition: all 1000ms;
+      animation-name: autoplay;
+      animation-duration: 10s;
+      animation-direction: alternate;
+      animation-fill-mode: forwards;
+      animation-iteration-count: infinite;
+    }
+
+    .item-slide {
+      margin-left: 1%;
+      margin-bottom: 10%;
+      width: 99%;
+      height: 100%;
+      position: relative;
+      flex-direction: column;
+      flex-shrink: 0;
+      flex-grow: 0;
+      background: -moz-radial-gradient(center, #b1c57c, #886a08);
+      background: -webkit-radial-gradient(center, #b1c57c, #886a08);
+      background: -ms-radial-gradient(center, #b1c57c, #886a08);
+      background: -o-radial-gradient(center, #b1c57c, #886a08);
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: #61380b 7px 7px 7px;
+      font-family: 'Inika', serif;
+      box-sizing: border-box;
+    }
+
+    .pagination {
+      position: absolute;
+      bottom: 20px;
+      left: 0;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+    }
+
+    .pagination-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border: 2px solid #F5FBC6;
+      width: 16px;
+      height: 16px;
+      border-radius: 10px;
+      overflow: hidden;
+      cursor: pointer;
+      background: #DEF4A1;
+      margin: 0 10px;
+      text-align: center;
+      transition: all 300ms;
+    }
+
+    .pagination-item:hover {
+      transform: scale(2);
+    }
+
+    .pagination-item img {
+      display: inline-block;
+      max-width: none;
+      height: 100%;
+      transform: scale(1);
+      opacity: 0;
+      transition: all 300ms;
+    }
+
+    .pagination-item:hover img {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    input[id="1"]:checked~.slide {
+      animation: none;
+      transform: translate3d(0, 0, 0);
+    }
+
+    input[id="1"]:checked~.pagination .pagination-item[for="1"] {
+      background: #fff;
+    }
+
+    input[id="2"]:checked~.slide {
+      animation: none;
+      transform: translate3d(calc(-100% * 1), 0, 0);
+    }
+
+    input[id="2"]:checked~.pagination .pagination-item[for="2"] {
+      background: #fff;
+    }
+
+
+    input[id="3"]:checked~.slide {
+      animation: none;
+      transform: translate3d(calc(-100% * 2), 0, 0);
+    }
+
+    input[id="3"]:checked~.pagination .pagination-item[for="3"] {
+      background: #fff;
+    }
+
+    input[id="4"]:checked~.slide {
+      animation: none;
+      transform: translate3d(calc(-100% * 3), 0, 0);
+    }
+
+    input[id="4"]:checked~.pagination .pagination-item[for="4"] {
+      background: #fff;
+    }
+
+
+    input[id="5"]:checked~.slide {
+      animation: none;
+      transform: translate3d(calc(-100% * 4), 0, 0);
+    }
+
+    input[id="5"]:checked~.pagination .pagination-item[for="5"] {
+      background: #fff;
+    }
+
+    input[id="6"]:checked~.slide {
+      animation: none;
+      transform: translate3d(calc(-100% * 5), 0, 0);
+    }
+
+    input[id="6"]:checked~.pagination .pagination-item[for="6"] {
+      background: #fff;
+    }
+
+    @keyframes autoplay {
+      16.66666666666667% {
+        transform: translate3d(calc(-100% * 0), 0, 0);
+      }
+
+      33.33333333333333% {
+        transform: translate3d(calc(-100% * 1), 0, 0);
+      }
+
+      50.00000000000001% {
+        transform: translate3d(calc(-100% * 2), 0, 0);
+      }
+
+      66.66666666666668% {
+        transform: translate3d(calc(-100% * 3), 0, 0);
+      }
+
+      83.33333333333335% {
+        transform: translate3d(calc(-100% * 4), 0, 0);
+      }
+
+      100% {
+        transform: translate3d(calc(-100% * 5), 0, 0);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="contenedor">
+    <header class="cabeceraWeb">
+      <a href="/Itza.html"><img class="logo" src="/img/logo.png" alt=""></a>
+      <h1 class="cabeceraWeb__titulo">I T Z A</h1>
+      <h2 class="cabeceraWeb__subtitulo">Manos creando</h2>
+    </header>
+
+    <nav class=" navegacion">
+      <ul class="main-menu">
+        <li class="main-menu__item"><a class="main-menu__link" href="/Itza.html">Inicio</a></li>
+        <li class="main-menu__item"><a class="main-menu__link" href="conocenos.html">Conócenos</a></li>
+        <li class="main-menu__item"><a class="main-menu__link" href="productos.html">Nuestros productos</a></li>
+        <li class="main-menu__item"><a class="main-menu__link" href="masajes.html">Nuestros masajes</a></li>
+        <li class="main-menu__item"> <a class="main-menu__link">Redes</a>
+          <ul class="submenu">
+            <li class="submenu__item"><a class="main-menu__link"
+                href="https://www.facebook.com/Itza-100150668664829/?view_public_for=100150668664829">Facebook</a></li>
+            <li class="submenu__item"><a class="main-menu__link"
+                href="https://www.instagram.com/itza_medicina/">Instagram</a></li>
+          </ul>
+        </li>
+        <li class="main-menu__item"><a class="main-menu__link" href="mailto:productositza1@gmail.com">Contáctanos</a>
+        </li>
+        <li class="main-menu__item"><a class="main-menu__link" href="circulo_mujeres.html">Círculo de mujeres</a>
+        </li>
+      </ul>
+    </nav>
+    <!-- Inicio del slider-->
+    <div class="container-all">
+
+      <input type="radio" id="1" name="image-slide" hidden />
+      <input type="radio" id="2" name="image-slide" hidden />
+      <input type="radio" id="3" name="image-slide" hidden />
+      <input type="radio" id="4" name="image-slide" hidden />
+      <input type="radio" id="5" name="image-slide" hidden />
+      <input type="radio" id="6" name="image-slide" hidden />
+
+      <div class="slide">
+
+        <div class="item-slide">
+          <h3 class="item-slide__titulo">Acéite de CBD</h3>
+          <br>
+          <img class="item-slide__imagen" src="/img/CBD.png" alt="">
+          <p class="item-slide__parrafo">Beneficios terapeuticos del CBD.
+            <br><br>
+            Primero que nada no es una sustancia psicoactiva.
+            Como funciona en el cuerpo humano? <br>
+            🔹️Alivia la ansiedad, antidepresivo y ansiolitico. <br>
+            🔹️Neuroprotector, para trastornos neurodegenerativos. <br>
+            🔹️Alivia el dolor. <br>
+            🔹️Reduce el riesgo de bloqueo de la arteria (anterosclerosis). <br>
+            🔹️Promueve el crecimiento de los huesos. <br>
+            🔹️Antinflamatorio. <br>
+            🔹️Apoptosis de celulas tumorales. <br>
+            🔹️Antiseptico. <br>
+            🔹️Asma. <br>
+            🔹️Quemaduras. <br>
+            🔹️Diabetes. <br>
+            🔹️Epilepsia. <br>
+            🔹️Anti convulsiónante. <br>
+            🔹️Relajante muscular. <br>
+            🔹️Estimula el apetito. <br>
+            🔹️Ayuda para el dolor de espalda en el embarazo.<br>
+          </p> <br>
+          <div class="item-slide__parrafo__precio"><strong>Tiene un precio de MXN $700 por 30ml.</strong></div>
+          <br>
+          <ul class="item-slide__informacion">
+            <h5 class="item-slide__informacion__titulo">Descripción, instrucciones de uso y advertencias</h5>
+            <li>Presentación: Frasco de 30ml.</li>
+            <li>Ingredientes: Cannabis y aceite de algodón.</li>
+            <li>Indicaciones terapéuticas: Trata y alivia enfermedades, padecimientos y transtornos que deterioran el
+              cuerpo y la mente. Está dirigido a personas mayores de edad que padezcan los males anterior expuestos.
+            </li>
+            <li>Uso: Ingerir 3 gotas aplicándolas por debajo de la lengua por la noche,aplicar durante un mes en el caso
+              de presentar uno o más de los padecimientos aquí mostrados (tratamiento). Pero en el caso de padecer
+              insomnio, querer
+              relajarse, entre otros padecimientos leves, sólo debe consumirse cuando sea necesario (sin tratamiento).
+            </li>
+            <li>Contraindicaciones: No consumirse....
+              <ul class="item-slide__informacion">
+                <li>si se piensa conducir un vehículo.</li>
+                <li>si se tienen problemas hepáticos.</li>
+                <li>si se consumieron otros medicamentos, ya que puede
+                  afectar su metabolismo, causando efectos secundarios graves.</li>
+                <li>con alcohol u otros depresores del sistema nervioso central, ya que incrementa el riesgo de sedación
+                  y
+                  somnolencia, lo que puede llevar
+                  a lesiones.</li>
+                <li>si se está embarazada o amamantando. En el caso del embarazo, se puede consumir siempre que se
+                  respete
+                  la dosis (3 gotas).</li>
+                <li>si se padece de malestar intestinal (diarrea).</li>
+              </ul>
+            </li>
+            <li>Advertencias y precauciones: No dejar al alcance de los niños</li>
+            <li>El comprador es responsable por el uso de este producto.</li>
+          </ul>
+        </div>
+
+        <div class="item-slide">
+          <h3 class="item-slide__titulo">Chilcuague</h3>
+          <h4 class="item-slide__subtitulo">(heliopsis longipes)</h4>
+          <br>
+          <img class="item-slide__imagen" src="/img/chilcuague.png" alt="">
+          <p class="item-slide__parrafo">Conocida como Raíz de oro.
+            Increíblemente poderosa, con un pequeño trozo en la boca tiene un efecto analgésico muy fuerte, con una
+            sensación de
+            burbujas como una magia en la boca, puedes sentir las propiedades antibacterianas y antivirales bajando
+            por la boca y la
+            garganta.
+            Utilizado para higiene oral, dolores de muelas, dolor de garganta, resfriado y gripe.
+            Aunque también puede ser utilizado en los pies para eliminar el hongo, y caspa.
+            *antibacteriano
+            *analgésico
+            *antifugico
+            *antinflamatorio
+            Adormece el dolor y aumenta simultáneamente el sistema inmunologico.
+            Además es de una zona indígena de México, se crece en los estados de Guanajuato y Morelos.</p> <br>
+          <div class="item-slide__parrafo__precio"><strong>Tiene un precio de MXN $150 por 30ml. y
+              $230 por 50ml.
+            </strong></div>
+          <br>
+          <ul class="item-slide__informacion">
+            <h5 class="item-slide__informacion__titulo">Descripción, instrucciones de uso y advertencias</h5>
+            <li>Presentación: Frasco de 30ml. y frasco de 50ml.</li>
+            <li>Ingredientes: Alcohol, agua destilada y raíz de chilcuague.</li>
+            <li>Indicaciones terapéuticas: Antibiótico, anticéptico, desinflamatorio, desinfectante y fungicida.</li>
+            <li>Uso: Rociar de una a dos veces en el área tópica y también vía oral para problemas en el área bucal.
+            </li>
+            <li>Contraindicaciones: No rociar directo en la garganta, tiene que ser al menos a 10 cm de la boca, de lo
+              contrario tiende a causar que la garganta se cierre y puede causar asfixia, no aplicar en los ojos.</li>
+            <li>Advertencias y precauciones: No dejar al alcance de los niños ni expuesto a la luz del sol.</li>
+            <li>El comprador es responsable por el uso de este producto.</li>
+          </ul>
+        </div>
+
+        <div class="item-slide">
+          <h3 class="item-slide__titulo">Palo Santo</h3>
+          <h4 class="item-slide__subtitulo">(Bursera graveolens)</h4>
+          <br>
+          <img class="item-slide__imagen" src="/img/paloSanto.png" alt="">
+          <p class="item-slide__parrafo">En alguna ocasión escuchaste hablar sobre el PALO SANTO?
+
+            Te platico, que es un árbol milenario originario de América del Sur.
+            Su principal característica es su exquisito aroma dulce intenso con toques cítricos.
+            Se sabe que que es muy útil como incienso para alejar las malas energías, dando paz y armonía ya que nos
+            conecta con el
+            amor humano aumentando la capacidad de dar y recibir.
+            Y cuando hay algún conflicto doméstico es necesario saumar un poco la casa o el sitio donde esto
+            ocurrió.
+            Promueve la atracción de pensamientos positivos!
+            Y es muy conocido porque profundiza la conexión sexual con la pareja!
+            Sobretodo al oler su aroma peculiar nos ayuda a concentrarnos en nuestros tiempos de introspección.
+
+            Este árbol muere de manera natural y después de 3 o 4 años de haber caído es cuando manifiesta sus
+            poderes.</p><br>
+          <div class="item-slide__parrafo__precio"><strong>Tiene un precio de MXN $5 por cada gramo.</strong></div>
+          <br>
+          <ul class="item-slide__informacion">
+            <h5 class="item-slide__informacion__titulo">Descripción, instrucciones de uso y advertencias:</h5>
+            <li>Presentación: Mínimo 200 gramos a la venta.</li>
+            <li>Ingredientes: Palo santo, es un incienso natural.</li>
+            <li>Indicaciones terapéuticas: Calma la ansiedad, es afrodiciaco y estimula la calma.</li>
+            <li>Uso: Uso esotérico.</li>
+            <li>Advertencias y precauciones: No dejar al alcance de los niños.</li>
+            <li>El comprador es responsable por el uso de este producto.</li>
+          </ul>
+        </div>
+
+        <div class="item-slide">
+          <h3 class="item-slide__titulo">Salvia Blanca</h3>
+          <h4 class="item-slide__subtitulo">(salvia apiana)</h4>
+          <br>
+          <img class="item-slide__imagen" src="/img/salviaBlanca.png" alt="">
+          <p class="item-slide__parrafo">Para armonizar, limpiar o repeler las vibraciones o emociones negativas, tanto
+            dentro como fuera de nosotros mismos, asi
+            como en nuestras casas, habitaciones, oficinas o cualquier lugar donde nos encontremos.
+
+            La usamos para limpiar nuestras Aura, tambien cuando tenemos un mal dia o vivimos situaciones
+            estresantes.
+
+            La salvia emite iones negativos, al igual que una cascada o una regadera (agua en movimiento).
+            Es por eso que la gente que esta cerca de agua en movimiento, siempre se sienten mas limpias al parecer
+            sin
+            ninguna
+            razón.
+            Pero dentro de todo hay una razón mas profunda...!
+            Nuestra Aura contiene iones positivos, solo que estos nos hacen sentir debiles, cansados o simplemente
+            no
+            llenos de
+            vida.
+            Entonces cuando encendemos el manojo de salvia, el humo se mezcla con los iones positivos se aferra a
+            ellos
+            y los
+            neutraliza.</p> <br>
+          <div class="item-slide__parrafo__precio"><strong>Tiene un precio de MXN $200 el atado.</strong></div>
+          <br>
+          <ul class="item-slide__informacion">
+            <h5 class="item-slide__informacion__titulo">Descripción, instrucciones de uso y advertencias</h5>
+            <li>Presentación: Amarrados de salvia blanca.</li>
+            <li>Ingredientes: Salvia blanca.</li>
+            <li>Indicaciones terapéuticas: Limpia el ambiente de virus y bacterias que se encuentran en el aire.</li>
+            <li>Uso: Uso esotérico.</li>
+            <li>Advertencias y precauciones: No dejar al alcance de los niños.</li>
+            <li>El comprador es responsable por el uso de este producto.</li>
+          </ul>
+        </div>
+
+        <div class="item-slide">
+          <h3 class="item-slide__titulo">Jabón de CBD con té verde.</h3>
+          <br>
+          <img class="item-slide__imagen" src="/img/jabon_cbd_teverde.jpg" alt="">
+          <p class="item-slide__parrafo">Especialmente para cutis, ya que es noble con la piel y da más vida a las
+            células, por lo que retarda el envejecimiento,
+            así como controlar el acné y problemas de alergias. Se puede utilizar en todo el cuerpo. <br> El jabón es
+            resultado de las propiedades curativas de ambas plantas, extraídas de manera
+            artesanal. </p> <br>
+          <div class="item-slide__parrafo__precio"><strong>Tiene un precio de MXN $50</strong></div>
+          <br>
+          <ul class="item-slide__informacion">
+            <h5 class="item-slide__informacion__titulo">Descripción, instrucciones de uso y advertencias</h5>
+            <li>Presentación: </li>
+            <li>Ingredientes: Aceite de CBD, planta de té verde, avena y glicerina.</li>
+            <li>Indicaciones terapéuticas: Especialmente para pieles con acné, alergias e infecciones.</li>
+            <li>Uso: Lavar la zona afectada por la mañana y por la noche.</li>
+            <li>Advertencias y precauciones: No utilizar en los ojos y dejar al alcance de los niños.</li>
+            <li>El comprador es responsable por el uso de este producto.</li>
+          </ul>
+        </div>
+
+        <div class="item-slide">
+          <h3 class="item-slide__titulo">Tintura de salvia.</h3>
+          <h4 class="item-slide__subtitulo">(Salvia officinalis)</h4>
+          <br>
+          <img class="item-slide__imagen" src="/img/salvia_planta.jpg" alt="">
+          <p class="item-slide__parrafo">
+            Su nombre en latín significa "salvar".
+          </p>
+          <div class="item-slide__parrafo__precio"><strong>Tiene un precio de MXN $120.</strong></div>
+          <ul class="item-slide__informacion">
+            <h5 class="item-slide__informacion__titulo">Beneficios:</h5>
+            <li>Problemas relacionados con el ciclo menstrual, ya sea irregularidades, amenorrea, cólicos y menstruación
+              escasa.</li>
+            <li>Cólicos propios de la menstruación y reduce sudores y sofoco que produce la menopausia.</li>
+            <li>Trata diferentes episodios dificultosos de nuestra vida, como insomnio, pérdida de memoria y la
+              depresión;
+              en su uso típico problemas de la piel como acné, psoriasis y alergias.</li>
+          </ul>
+          <br>
+          <ul class="item-slide__informacion">
+            <h5 class="item-slide__informacion__titulo">Descripción, instrucciones de uso y advertencias</h5>
+            <li>Presentación: Frasco con 30 ml.</li>
+            <li>Ingredientes: Planta de CBD y planta de té verde</li>
+            <li>Indicaciones terapéuticas:</li>
+            <li>Recomendaciones de uso: En nuestra tintura madre, se recomienda utilizarla 20 gotas diarias en agua o
+              jugo, todos los días o dias que se
+              requiera;
+              en uso topico, poner en alguna crema cosmética cada que se utilice.</li>
+            <li>Contraindicaciones: </li>
+            <li>Advertencias y precauciones: <ul class="item-slide__informacion">
+                <li>No consumir en cantidades altas.</li>
+                <li>No utilizar en embarazo o lactancia.</li>
+                <li>No recomendado para personas con desequilibrios hormonales ya que funciona como estrógeno.</li>
+              </ul>
+            </li>
+            <li>El comprador es responsable por el uso de este producto.</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="pagination">
+
+        <label class="pagination-item" for="1">
+          <img src="/img/CBD.png">
+        </label>
+
+        <label class="pagination-item" for="2">
+          <img src="/img/chilcuague.png">
+        </label>
+
+        <label class="pagination-item" for="3">
+          <img src="/img/paloSanto.png">
+        </label>
+
+        <label class="pagination-item" for="4">
+          <img src="/img/salviaBlanca.png">
+        </label>
+
+        <label class="pagination-item" for="5">
+          <img src="/img/jabon_cbd_teverde.jpg">
+        </label>
+
+        <label class="pagination-item" for="6">
+          <img src="/img/salvia_planta.jpg">
+        </label>
+
+      </div>
+
+    </div>
+
+    <footer class="piePrincipal">
+      <address>
+        <small>
+          <ul>
+            <li>Copyright © 2020 Itza Todos los derechos reservados</li>
+            <li>Tel: 3311143111 3320347623</li>
+            <li>Facebook: @ItzaSalud</li>
+            <li>Correo: productositza1@gmail.com</li>
+          </ul>
+        </small>
+      </address>
+    </footer>
+  </div>
+</body>
+
+</html>

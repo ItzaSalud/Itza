@@ -1,0 +1,295 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url(../img/chilcuaguePlanta.png);
+  background-attachment: fixed;
+  background-size: cover;
+  font-size: 20px;
+  font-family: "Inika", serif;
+}
+
+.contenedor {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.cabeceraWeb {
+  max-width: 100%;
+  background-image: url(../img/CBDplanta.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  text-align: center;
+}
+
+.cabeceraWeb__logo {
+  margin-top: 10px;
+}
+
+.cabeceraWeb__titulo {
+  display: block;
+  color: #def4a1;
+  font-size: 5rem;
+  font-family: "Marko One", serif;
+}
+
+.cabeceraWeb__subtitulo {
+  display: block;
+  color: #f5fbc6;
+  font-family: "Marko One", serif;
+}
+
+.navegacion {
+  max-width: 100%;
+  position: sticky;
+  top: 0px;
+  z-index: 10;
+  font-family: Papyrus, Viner Hand ITC, serif;
+}
+
+.main-menu {
+  background: -moz-linear-gradient(left, #886a08, #b1c57c);
+  background: -webkit-linear-gradient(left, #886a08, #b1c57c);
+  background: -ms-linear-gradient(left, #886a08, #b1c57c);
+  background: -o-linear-gradient(left, #886a08, #b1c57c);
+  list-style: none;
+  text-align: center;
+}
+
+.main-menu__item {
+  display: inline-block;
+  text-align: center;
+}
+
+.main-menu__link {
+  text-decoration: none;
+  color: #f5fbc6;
+  display: inline-block;
+  padding: 20px;
+}
+
+.main-menu__link:hover {
+  color: #61380b;
+}
+
+.main-menu__item:hover {
+  background-color: #f5fbc6;
+}
+
+.main-menu__link:active {
+  color: #886a08;
+}
+
+.main-menu__item:active {
+  background-color: #def4a1;
+}
+
+.submenu {
+  list-style: none;
+  background: -moz-linear-gradient(left, #886a08, #b1c57c);
+  background: -webkit-linear-gradient(left, #886a08, #b1c57c);
+  background: -ms-linear-gradient(left, #886a08, #b1c57c);
+  background: -o-linear-gradient(left, #886a08, #b1c57c);
+  display: none;
+  position: absolute;
+  min-width: 140px;
+  z-index: 10;
+}
+
+.submenu__link {
+  text-decoration: none;
+  color: white;
+  padding: 30px;
+  display: block;
+}
+
+.submenu__link:hover {
+  color: #61380b;
+}
+
+.submenu__item:hover {
+  background-color: #f5fbc6;
+}
+
+.main-menu__item:hover>.submenu {
+  display: block;
+}
+
+.contenidoPrincipal {
+  width: 100%;
+  display: flex;
+}
+
+.seccion {
+  max-width: 70%;
+  display: inline-block;
+  margin: auto;
+}
+
+.quienesSomos {
+  max-width: 100%;
+  color: #886a08;
+  background: -moz-radial-gradient(center, ellipse, #def4a1, #8aaa31);
+  background: -webkit-radial-gradient(center, ellipse, #def4a1, #8aaa31);
+  background: -ms-radial-gradient(center, ellipse, #def4a1, #8aaa31);
+  background: -o-radial-gradient(center, ellipse, #def4a1, #8aaa31);
+  margin: 15px auto;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: #61380b 7px 7px 7px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.introduccion {
+  max-width: 100%;
+  color: #f5fbc6;
+  background: -moz-linear-gradient(left, #886a08, #b1c57c);
+  background: -webkit-linear-gradient(left, #886a08, #b1c57c);
+  background: -ms-linear-gradient(left, #886a08, #b1c57c);
+  background: -o-linear-gradient(left, #886a08, #b1c57c);
+  margin: 15px auto;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: #61380b 7px 7px 7px;
+  text-align: center;
+}
+
+.introduccion__titulo {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  line-height: 50px;
+  color: #f5fbc6;
+}
+
+.introduccion__parrafo1 {
+  font-size: 2rem;
+  line-height: 1, 6;
+  color: #f5fbc6;
+}
+
+.introduccion__subtitulo1 {
+  font-size: 3rem;
+  color: #def4a1;
+}
+
+.introduccion__imagen {
+  width: 50%;
+  border-radius: 10px;
+  border: 3px solid #def4a1;
+  text-align: center;
+}
+
+.introduccion__subtitulo2 {
+  font-size: 3rem;
+  color: #def4a1;
+}
+
+.introduccion__parrafo2 {
+  font-size: 2rem;
+  line-height: 1, 6;
+  color: #f5fbc6;
+}
+
+.introduccion__lista {
+  list-style-type: circle;
+  font-size: 25px;
+  line-height: 1, 6;
+  color: #def4a1;
+  text-align: left;
+  padding-left: 35px;
+}
+
+.introduccion__imagen2 {
+  width: 30%;
+  border-radius: 10px;
+  border: 3px solid #b1c57c;
+  text-align: center;
+}
+
+.masajes__imagen2 {
+  max-width: 100%;
+  border-radius: 10px;
+  border: solid #f5fbc6 5px;
+  text-align: center;
+}
+
+.masajes__parrafo {
+  color: #61380b;
+}
+
+.masajes__link {
+  color: #8aaa31;
+  text-decoration: none;
+}
+
+.piePrincipal {
+  background-color: #b1c57c;
+  font-family: none;
+  text-align: center;
+  line-height: 2;
+}
+
+.item-slide__titulo {
+  color: #f5fbc6;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.item-slide__subtitulo {
+  color: #def4a1;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.item-slide__imagen {
+  max-width: 30%;
+  border-radius: 10px;
+  border: #f5fbc6 solid 4px;
+  float: right;
+}
+
+.item-slide__parrafo {
+  color: #f5fbc6;
+  font-size: 1.5rem;
+}
+
+.item-slide__parrafo__precio {
+  font-size: 2rem;
+  display: inline-block;
+  color: #F5FBC6;
+  background-color: #B1C57C;
+  border-radius: 10px;
+  padding: 5px;
+  border: #f5fbc6 solid 4px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.item-slide__parrafo__lista {
+  color: #f5fbc6;
+  font-size: 1.5rem;
+  list-style: circle;
+  padding-left: 3%;
+}
+
+.item-slide__parrafo__lista__titulo {
+  color: #f5fbc6;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.item-slide__informacion {
+  color: #f5fbc6;
+  font-size: 1.5rem;
+  list-style: circle;
+  padding-left: 5%;
+}
+
+.item-slide__informacion__titulo {
+  color: #f5fbc6;
+  font-size: 2rem;
+  text-align: left;
+}

@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Masajes</title>
+  <link rel="stylesheet" href="/css/Itza.css">
+  <link rel="icon" href="/img/logo.ico">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inika&family=Marko+One&display=swap" rel="stylesheet">
+  <style>
+    .container-all {
+      position: relative;
+      min-width: 70%;
+      width: 70%;
+      overflow: hidden;
+      margin: 15px auto;
+    }
+
+    .slide {
+      width: 100%;
+      display: flex;
+      transform: translate3d(0, 0, 0);
+      transition: all 1000ms;
+      animation-name: autoplay;
+      animation-duration: 10s;
+      animation-direction: alternate;
+      animation-fill-mode: forwards;
+      animation-iteration-count: infinite;
+    }
+
+    .item-slide {
+      margin-left: 1%;
+      margin-bottom: 10%;
+      width: 99%;
+      height: 100%;
+      position: relative;
+      flex-direction: column;
+      flex-shrink: 0;
+      flex-grow: 0;
+      background: -moz-radial-gradient(center, #b1c57c, #886a08);
+      background: -webkit-radial-gradient(center, #b1c57c, #886a08);
+      background: -ms-radial-gradient(center, #b1c57c, #886a08);
+      background: -o-radial-gradient(center, #b1c57c, #886a08);
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: #61380b 7px 7px 7px;
+      font-family: 'Inika', serif;
+      box-sizing: border-box;
+    }
+
+    .pagination {
+      position: absolute;
+      bottom: 20px;
+      left: 0;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+    }
+
+    .pagination-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border: 2px solid #F5FBC6;
+      width: 16px;
+      height: 16px;
+      border-radius: 10px;
+      overflow: hidden;
+      cursor: pointer;
+      background: #DEF4A1;
+      margin: 0 10px;
+      text-align: center;
+      transition: all 300ms;
+    }
+
+    .pagination-item:hover {
+      transform: scale(2);
+    }
+
+    .pagination-item img {
+      display: inline-block;
+      max-width: none;
+      height: 100%;
+      transform: scale(1);
+      opacity: 0;
+      transition: all 300ms;
+    }
+
+    .pagination-item:hover img {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    input[id="1"]:checked~.slide {
+      animation: none;
+      transform: translate3d(0, 0, 0);
+    }
+
+    input[id="1"]:checked~.pagination .pagination-item[for="1"] {
+      background: #fff;
+    }
+
+    input[id="2"]:checked~.slide {
+      animation: none;
+      transform: translate3d(calc(-100% * 1), 0, 0);
+    }
+
+    input[id="2"]:checked~.pagination .pagination-item[for="2"] {
+      background: #fff;
+    }
+
+
+    input[id="3"]:checked~.slide {
+      animation: none;
+      transform: translate3d(calc(-100% * 2), 0, 0);
+    }
+
+    input[id="3"]:checked~.pagination .pagination-item[for="3"] {
+      background: #fff;
+    }
+
+    input[id="4"]:checked~.slide {
+      animation: none;
+      transform: translate3d(calc(-100% * 3), 0, 0);
+    }
+
+    input[id="4"]:checked~.pagination .pagination-item[for="4"] {
+      background: #fff;
+    }
+
+    input[id="5"]:checked~.slide {
+      animation: none;
+      transform: translate3d(calc(-100% * 4), 0, 0);
+    }
+
+    input[id="5"]:checked~.pagination .pagination-item[for="5"] {
+      background: #fff;
+    }
+
+    input[id="6"]:checked~.slide {
+      animation: none;
+      transform: translate3d(calc(-100% * 5), 0, 0);
+    }
+
+    input[id="6"]:checked~.pagination .pagination-item[for="6"] {
+      background: #fff;
+    }
+
+    @keyframes autoplay {
+      16.66666666666667% {
+        transform: translate3d(calc(-100% * 0), 0, 0);
+      }
+
+      33.33333333333333% {
+        transform: translate3d(calc(-100% * 1), 0, 0);
+      }
+
+      50.00000000000001% {
+        transform: translate3d(calc(-100% * 2), 0, 0);
+      }
+
+      66.66666666666668% {
+        transform: translate3d(calc(-100% * 3), 0, 0);
+      }
+
+      83.33333333333335% {
+        transform: translate3d(calc(-100% * 4), 0, 0);
+      }
+
+      100% {
+        transform: translate3d(calc(-100% * 5), 0, 0);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="contenedor">
+    <header class="cabeceraWeb">
+      <a href="/Itza.html"><img class="logo" src="/img/logo.png" alt=""></a>
+      <h1 class="cabeceraWeb__titulo">I T Z A</h1>
+      <h2 class="cabeceraWeb__subtitulo">Manos creando</h2>
+    </header>
+
+    <nav class=" navegacion">
+      <ul class="main-menu">
+        <li class="main-menu__item"><a class="main-menu__link" href="/Itza.html">Inicio</a></li>
+        <li class="main-menu__item"><a class="main-menu__link" href="conocenos.html">Conócenos</a></li>
+        <li class="main-menu__item"><a class="main-menu__link" href="productos.html">Nuestros productos</a></li>
+        <li class="main-menu__item"><a class="main-menu__link" href="masajes.html">Nuestros masajes</a></li>
+        <li class="main-menu__item"> <a class="main-menu__link">Redes</a>
+          <ul class="submenu">
+            <li class="submenu__item"><a class="main-menu__link"
+                href="https://www.facebook.com/Itza-100150668664829/?view_public_for=100150668664829">Facebook</a></li>
+            <li class="submenu__item"><a class="main-menu__link"
+                href="https://www.instagram.com/itza_medicina/">Instagram</a></li>
+          </ul>
+        </li>
+        <li class="main-menu__item"><a class="main-menu__link" href="mailto:productositza1@gmail.com">Contáctanos</a>
+        </li>
+        <li class="main-menu__item"><a class="main-menu__link" href="circulo_mujeres.html">Círculo de mujeres</a>
+        </li>
+      </ul>
+    </nav>
+    <!-- Inicio del slider-->
+    <div class="container-all">
+
+      <input type="radio" id="1" name="image-slide" hidden />
+      <input type="radio" id="2" name="image-slide" hidden />
+      <input type="radio" id="3" name="image-slide" hidden />
+      <input type="radio" id="4" name="image-slide" hidden />
+      <input type="radio" id="5" name="image-slide" hidden />
+      <input type="radio" id="6" name="image-slide" hidden />
+
+      <div class="slide">
+
+        <div class="item-slide">
+          <h3 class="item-slide__titulo">MASAJE MAYA SPA.</h3>
+          <br>
+          <img class="item-slide__imagen" src="/img/masaje_cura_estres.png" alt="">
+          <p class="item-slide__parrafo">Este masaje se desarrolla después de un profundo estudio de
+            investigación de la cultura maya, quienes fueron astrónomos,
+            matemáticos y, sobre todo, conocedores de las propiedades medicinales de las plantas y beneficios de los
+            masajes (una
+            forma de manipulación de las capas superficiales y profundas de los músculos del cuerpo).
+            <br>
+            Es integral, ya que busca la salud y el equilibrio del cuerpo, la mente y el espíritu y, sobre todo, la
+            noción
+            del hombre
+            y su relación con Dios y la naturaleza.
+            <br>
+            Para la cultura Maya, la enfermedad es la consecuencia de la ruptura del equilibrio y armonía con las
+            divinidades,
+            naturaleza, comunidad, su familia y su propio organismo. <br>
+            Se aplica con aceites naturales y esencias provenientes de la aromaterapia.
+          </p> <br>
+          <div class="item-slide__parrafo__precio">
+            <strong>Tiene un precio de MXN $700 con una duración de 1:30 min. Para cualquier información, macar o mandar
+              mensaje a cualquiera de los números de teléfono.</strong>
+          </div>
+          <br><br>
+          <ul class="item-slide__parrafo__lista">
+            <h5 class="item-slide__parrafo__lista__titulo">Parte de sus beneficios:</h5>
+            <li>Temazcal terapéutico.</li>
+            <li>La aplicación de medicina natural y herbolaria</li>
+            <li>Desintoxicación del cuerpo</li>
+            <li>Reestablecer
+              ritmos biológicos (cronobiología)</li>
+            <li>Liberación de cuadros psicoemocionales que afectan el metabolismo.</li>
+          </ul>
+        </div>
+
+        <div class="item-slide">
+          <h3 class="item-slide__titulo">Masaje muscular profundo</h3>
+          <h4 class="item-slide__subtitulo">(terapia con crema)</h4>
+          <br>
+          <img class="item-slide__imagen" src="/img/masaje_muscular_profundo.jpg" alt="">
+          <h5 class="item-slide__informacion__titulo">Masaje de intensidad profunda recomendado a personas con alto tono
+            muscular o para aquellos que prefieren
+            el masaje con
+            mayor intensidad.</h5>
+          <br>
+          <div class="item-slide__parrafo__precio" id="muscular_profundo_aviso">
+            <strong>Tiene un precio de MXN $700. Para cualquier información, macar o mandar mensaje a cualquiera de los
+              números de teléfono.</strong>
+          </div>
+          <ul class="item-slide__informacion">
+            <li>Duración: 60 min.</li>
+            <li>Técnicas: Muscular profundo.</li>
+            <li>Principales zonas del cuerpo: Espalda.</li>
+            <li>Otras zonas del cuerpo a destacar: Piernas, brazos, escote, boca abajo y boca arriba.</li>
+            <li>¿Qué aporta? Descontracturante, estimulante, libera tensión, aumenta la movilidad, equilibra la energía
+              vital que
+              guarda, relación directa con los músculos. Ideal para el Jet lag (Trastorno del sueño que puede afectar a
+              las personas
+              que viajan en varios husos horarios).</li>
+            <li>Recomendado para clientes: Deportistas, personas con dolores musculares crónicos, cansancio muscular,
+              Jet
+              lag.</li>
+            <li>Menos recomendado: Adultos mayores con poca masa muscular, personas que nunca hayan tomado masaje,
+              embarazo.</li>
+            <li>Diferencia o plus con otros servicios similares: Tiene efectos correctivos que ayudan a mejorar la
+              movilidad y a liberar
+              el estrés así como el dolor muscular crónico.</li>
+          </ul>
+        </div>
+
+        <div class="item-slide">
+          <h3 class="item-slide__titulo">Masaje Aromaterapia</h3>
+          <h4 class="item-slide__subtitulo">(Terapia con aceite a elegir)</h4>
+          <br>
+          <img class="item-slide__imagen" src="/img/masaje_aromaterapia.jpg" alt="">
+          <h5 class="item-slide__informacion__titulo">Masaje relajante con aplicación del aceite aromático de efecto
+            relajante, estimulante o equilibrante, según su elección.
+            Pregunte por los aceites aromáticos a elegir y personalice su masaje con el aceite de su preferencia.</h5>
+          <div class="item-slide__parrafo__precio">
+            <strong>Tiene un precio de MXN $700. Para cualquier información, macar o mandar mensaje a cualquiera de los
+              números de teléfono.</strong>
+          </div>
+          <ul class="item-slide__informacion">
+            <li>Servicio: Aromaterapia (Terapia con aceite a elegir).</li>
+            <li>Duración: 60 min.</li>
+            <li>Técnicas: Relajante.</li>
+            <li>Principales zonas del cuerpo: Espalda.</li>
+            <li>Otras zonas del cuerpo a destacar: Piernas, escote, brazos, boca abajo y boca arriba.</li>
+            <li>¿Qué aporta? Experiencia aromática que estimula los sentidos. Una sensación de relajación absoluta que
+              incide en el
+              sistema nervioso, por lo que también es útil para solventar dificultades directamente ligadas a patrones
+              emocionales.</li>
+            <li>Recomendado para clientes: Que gusten de aceites aromáticos y de un masaje con una presión de suave a
+              media.</li>
+            <li>Menos recomendado: Para clientes que no les gusten los aromas o suelan tener algunas reacciones o
+              alergias
+              específicas,
+              niños menores de 6 años, embarazo y lactancia.</li>
+            <li>Diferencia o plus con otros servicios similares: Aceite aromático, experiencia sensorial y activa los
+              sentidos.</li>
+          </ul>
+        </div>
+
+        <div class="item-slide">
+          <h3 class="item-slide__titulo">Masaje cura para el estrés.</h3>
+          <h4 class="item-slide__subtitulo">(Terapia con crema)</h4>
+          <br>
+          <img class="item-slide__imagen" src="/img/masaje_cura_estres.png" alt="">
+          <h5 class="item-slide__informacion__titulo">Este masaje combina el calor de las pindas (pequeños saquitos de
+            tela,
+            de tejido natural como algodón o lino, que se
+            rellenan de plantas aromáticas. Se utilizan como herramienta para dar el masaje y contribuyen a abrir los
+            poros de la
+            piel, facilitando así la absorción de los principios activos) con masaje muscular profundo, consiguiendo
+            mayor
+            descongestión y descarga, tanto física como mental. Este masaje incluye además masaje suave en el abdomen y
+            culmina con
+            un masaje de pies.</h5>
+          <div class="item-slide__parrafo__precio">
+            <strong>Tiene un precio de MXN $700. Para cualquier información, macar o mandar mensaje a cualquiera de los
+              números de teléfono.</strong>
+          </div>
+          <ul class="item-slide__informacion">
+            <li>Servicio: Cura para el estrés (Terapia con crema).</li>
+            <li>Duración: 80 min.</li>
+            <li>Técnicas: Muscular profundo (técnica principal), reflexología, masaje en abdomen.</li>
+            <li>Principales zonas del cuerpo: Espalda.</li>
+            <li>Otras zonas del cuerpo a destacar: Piernas, brazos, escote, pies.</li>
+            <li>¿Qué aporta? Descontracturante. Relajación muscular, ya que libera los patrones crónicos de la tensión
+              en
+              el cuerpo.
+              Trabaja en profundidad los músculos oxigenándolos. El más estimulante y descontracturante.</li>
+            <li>Menos recomendado: Clientes con presión alta, que no les gusta el calor, muy obesos y no que no les
+              guste
+              masaje en
+              abdomen.</li>
+            <li>Diferencia o plus con otros servicios similares: Costalitos calientes que crean una vasodilatación
+              (aumento del calibre
+              de un vaso por relajación de las fibras musculares) y así un efecto sedante, reflexología (forma de
+              medicina
+              alternativa
+              que usa la aplicación de presión en los pies y las manos con técnicas específicas de pulgar, dedo y mano
+              sin
+              el uso de
+              aceite o loción), masaje en el abdomen que estimula el buen funcionamiento del sistema digestivo.</li>
+          </ul>
+        </div>
+
+        <div class="item-slide">
+          <h3 class="item-slide__titulo">Masaje relajante</h3>
+          <h4 class="item-slide__subtitulo">(terapia con crema)</h4>
+          <br>
+          <img class="item-slide__imagen" src="/img/masaje_relajante.jpg" alt="">
+          <h5 class="item-slide__informacion__titulo">❣❣PROMOCIÓN FEBRERO MES DEL AMOR: Dúo (dos personas) por sólo
+            $1100 (normalmente cuesta $700 por persona)❣❣
+            Promoción válida hasta el 14 de febrero a las 23:59. <br> Dales a ti y a tu pareja una experiencia
+            liberadora y relajante como nunca antes han tenido, libérense de todos los
+            males producto del estrés que la pandemia ha traído consigo, mejoren su salud y calidad de vida.</h5>
+
+          <div class="item-slide__parrafo__precio">
+            <strong>Para cualquier información, macar o mandar mensaje a cualquiera de los números de teléfono.</strong>
+          </div>
+          <ul class="item-slide__informacion">
+            <li>Duración: 50 min.</li>
+            <li>Técnicas: Relajante.</li>
+            <li>Principales zonas del cuerpo: Espalda.</li>
+            <li>Otras zonas del cuerpo a destacar: Piernas, brazos, escote, boca abajo y boca arriba.</li>
+            <li>¿Qué aporta? Trabaja líneas que activan la circulación de la sangre, elimina productos de desecho
+              acumulados en el torrente
+              sanguíneo, se experimenta una sensación de calma y tranquilidad.</li>
+            <li>Recomendado para clientes: Liberar estrés, desconectar, adultos mayores, personas con dolores
+              específicos
+              o que nunca hayan tomado masaje, que les
+              guste la presión muy suave, niños.</li>
+            <li>Menos recomendado: Deportistas, personas con contracturas, personas que les guste la presión, embarazo
+              de
+              4 meses o menos.</li>
+            <li>Diferencia o plus con otros servicios similares: La experiencia de calma y tranquilidad cuerpo y mente
+              debido a sus movimientos suaves y rítmicos.</li>
+          </ul>
+        </div>
+
+        <div class="item-slide">
+          <h3 class="item-slide__titulo">Reflexología podal</h3>
+          <br>
+          <img class="item-slide__imagen" src="/img/reflexologia_podal.jpg" alt="">
+          <p class="item-slide__parrafo">
+            La ajetreada vida contemporánea hace que nos olvidemos de cuidar muchas partes de nuestro cuerpo, entre
+            ellas
+            están los
+            pies, los cuales reciben diversas terminaciones nerviosas. La planta del pie y el pie en sí mismo
+            representan
+            de forma
+            esquemática la totalidad del cuerpo humano incluyendo sus órganos. Este es el principio de la reflexología
+            podal.
+            <br><br>
+            La Reflexología podal se basa en el tratamiento de zonas reflejas, o lo que es lo mismo, en masajear ciertas
+            zonas de
+            los pies que son el reflejo de una zona concreta del cuerpo, por lo que causa reacciones y estímulos a modo
+            reflejo
+            sobre las correspondientes partes del cuerpo por medio del masaje dependiendo del área específica del pie
+            que
+            se esté
+            tratando, además tiene una importancia diagnóstica.
+            <br><br>
+            Esta práctica influye positivamente en los desórdenes de órganos y funciones corporales que presentan
+            algunas
+            personas.
+            <br><br>
+            Es una disciplina complementaria de la fisioterapia.
+          </p>
+          <div class="item-slide__parrafo__precio"><strong>Tiene un precio de MXN $300 Para cualquier información, macar
+              o
+              mandar mensaje a cualquiera de los números de teléfono.</strong></div>
+        </div>
+
+      </div>
+
+      <div class="pagination">
+
+        <label class="pagination-item" for="1">
+          <img src="/img/masaje_cura_estres.png">
+        </label>
+
+        <label class="pagination-item" for="2">
+          <img src="/img/masaje_muscular_profundo.jpg">
+        </label>
+
+        <label class="pagination-item" for="3">
+          <img src="/img/masaje_aromaterapia.jpg">
+        </label>
+
+        <label class="pagination-item" for="4">
+          <img src="/img/masaje_cura_estres.png">
+        </label>
+
+        <label class="pagination-item" for="5">
+          <img src="/img/masaje_relajante.jpg">
+        </label>
+
+        <label class="pagination-item" for="6">
+          <img src="/img/reflexologia_podal.jpg">
+        </label>
+
+      </div>
+
+    </div>
+
+    <footer class="piePrincipal">
+      <address>
+        <small>
+          <ul>
+            <li>Copyright © 2020 Itza Todos los derechos reservados</li>
+            <li>Tel: 3311143111 3320347623</li>
+            <li>Facebook: @ItzaSalud</li>
+            <li>Correo: productositza1@gmail.com</li>
+          </ul>
+        </small>
+      </address>
+    </footer>
+  </div>
+</body>
+
+</html>
